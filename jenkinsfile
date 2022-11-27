@@ -6,7 +6,7 @@ steps {
 sh '''
 sshagent(['copy']) {
 ssh -o StrictHostKeyChecking=no ubuntu@172.31.10.140
-sudo scp /var/lib/jenkins/jobs/Backup ubuntu@172.31.10.140:/home/ubuntu/
+scp /var/lib/jenkins/workspace/Backup ubuntu@172.31.10.140:/home/ubuntu/
 '''
 
 }
