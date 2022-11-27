@@ -5,8 +5,8 @@ stage ('copy'){
 steps {
 sh '''
 sshagent(['copy']) {
-ssh -o StrictHostKeyChecking=no ubuntu@172.31.10.140
-scp /var/lib/jenkins/workspace/copy ubuntu@172.31.10.140:/home/ubuntu/copy
+"ssh -o StrictHostKeyChecking=no ubuntu@172.31.10.140"
+"scp /var/lib/jenkins/workspace/copy ubuntu@172.31.10.140:/home/ubuntu/copy"
 '''
 
 }
