@@ -3,9 +3,9 @@ agent any
 stages{
 stage ('copy'){
 steps {
-sshagent('copy') {
+sshagent(['copy']) {
 sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.10.140'
- sh 'scp /var/lib/jenkins/workspace/copy ubuntu@172.31.10.140:/home/ubuntu'
+sh 'scp /var/lib/jenkins/workspace/copy ubuntu@172.31.10.140:/home/ubuntu'
  }
 }
 }
